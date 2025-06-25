@@ -1,0 +1,58 @@
+@media print {
+  /* Hide non-essential elements when printing */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Optimize layout for printing */
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+    color: black !important;
+    background: white !important;
+  }
+
+  /* Ensure proper page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+
+  /* Optimize spacing for print */
+  .print-section {
+    margin-bottom: 20px;
+  }
+
+  /* Hide interactive elements */
+  button,
+  .fixed,
+  .sticky {
+    display: none !important;
+  }
+
+  /* Ensure proper margins */
+  @page {
+    margin: 0.5in;
+  }
+
+  /* Make sure text is readable */
+  h1,
+  h2,
+  h3 {
+    color: black !important;
+  }
+
+  /* Optimize borders and backgrounds for print */
+  .border-b-2 {
+    border-bottom: 2px solid #333 !important;
+  }
+
+  .bg-gray-50,
+  .bg-gray-100 {
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+  }
+}
