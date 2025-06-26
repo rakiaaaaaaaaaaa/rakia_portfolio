@@ -50,6 +50,134 @@ export default function CVPage() {
     })
   }
 
+  const downloadPDF = () => {
+    // Create PDF content as a formatted text document
+    const pdfContent = `
+RAKIA SOUEI
+Software Engineering Student
+
+CONTACT INFORMATION
+Date of birth: 21/11/2001
+Nationality: Tunisian
+Gender: Female
+Phone: (+216) 51137455
+Email: rakia.souei@gmail.com
+Website: https://rakia-souei.vercel.app/
+LinkedIn: https://www.linkedin.com/in/rakia-souei-b98a0822b/
+GitHub: https://github.com/rakiaaaaaaaaaaa
+Address: Tunisia
+
+ABOUT ME
+A final-year software engineering student passionate about exploring new technologies, AI, and Web3. I am currently working on an entrepreneurial project and enjoy engaging in social and community activities that leverage technology to solve humanitarian challenges in my local community. I'm always eager to get involved in new projects and opportunities that expand my network and knowledge. I am now seeking an opportunity to join your team and contribute meaningfully.
+
+EDUCATION AND TRAINING
+01/09/2023 – CURRENT
+SOFTWARE ENGINEERING
+Higher Institute of Computing and Multimedia of Gabès, Tunisia
+
+15/09/2021 – 01/06/2023
+PREPARATORY CYCLE
+Higher Institute of Computing and Multimedia of Gabès, Tunisia
+
+PROFESSIONAL EXPERIENCE
+01/07/2024 – 30/08/2024
+INTERNSHIP - Emertex, India
+
+01/08/2024 – 15/08/2024
+INTERNSHIP - MG MAXI, Gabes, Tunisia
+
+LANGUAGE SKILLS
+Mother tongue: Arabic
+Other languages: English | French
+
+TECHNICAL SKILLS
+Programming Languages: Python, Java, JavaScript, PHP, HTML, CSS, SQL
+Frameworks & Technologies: React.js, Flutter, Symfony, WordPress, Deep Learning, Generative AI, Natural Language Processing, IoT & Embedded Systems, Web3, Hedera Tech
+Tools & Design: Git & GitHub, Figma, Photoshop, Canva, ISTQB Basics
+Methodologies: AGILE Principles, Scrum Fundamentals
+Leadership & Management: Event Organization, Leadership
+
+TECHNICAL PROJECTS
+• IEEE ISIMG Student Branch Website: https://ias-isimg.ieee.tn/
+• IEEE ISIMG Student Branch Chapter Website: https://ias-isimg.ieee.tn/
+• Deep Learning Spinal Cord Segmentation: https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation
+• IoT Smart House: https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house
+• Calendar Application: https://github.com/rakiaaaaaaaaaaa/Calendar-App
+• Painting Application: https://github.com/rakiaaaaaaaaaaa/Painting-Application
+• Game Puzzle: https://github.com/rakiaaaaaaaaaaa/Game-Puzzle
+• Movie Application: https://github.com/rakiaaaaaaaaaaa/Movie-app
+
+CERTIFICATES
+
+AI & Data Science:
+• NVIDIA: Generative AI with Diffusion Models
+• IBM: Python 101 for Data Science
+• The NGB: General AI Basics and NLP
+
+Software & Web Development:
+• IEEE Computer Society: Flutter Training Bootcamp
+• IBM: Python 101 for Data Science
+• The Hashgraph Developer Course
+• WordPress
+
+Agile & Project Management:
+• Scrum Fundamentals Certified (SFC)
+• IEEE Mentorship Program
+• 4C FSG: Training in Negotiation Techniques
+
+Innovation & Entrepreneurship:
+• Avila University: Innovation & Entrepreneurship
+• Dar Blockchain Friday Program
+
+HONOURS AND AWARDS
+• DevHACH AI Hackathon – Second Place Winner 2024 – Gabes University
+• Winner, IEEE R8 CS SYP "Share Your Journey" Contest – 2024 – IEEE Computer Society
+• Inspiring Student Ambassador – 2024 – IEEE Region 8 Special Interest Group on Humanitarian Technology
+• Student Entrepreneur Status – Nominated 2025 – University of Gabès
+• Chair of the Organizing Committee, Ecoguardians Competition 1.0 – 2024 – IEEE
+• Volunteered on the Organizing Committee, Gabes Cinema Fan Festival – 2024 & 2025 – Gabes Cinema Fan
+
+CONFERENCES AND SEMINARS
+30/11/2024 – 03/12/2024, Cairo, Egypt
+IEEE Computer Society R8 Congress
+IEEE CS R8 SYP is an international congress that gathers engineers and professionals from around the world, where SYP stands for Students and Young Professionals.
+
+15/10/2024 – 16/10/2024, Hammamet, Tunisia
+IEEE Women In Engineering Annual Congress of Tunisia 4.0
+WIE Annual Congress of Tunisia is a conference that promotes the missions, purposes, and visions of IEEE and Women in Engineering.
+
+13/10/2024 – 15/10/2024, Sousse, Tunisia
+IEEE Industry Applications Society Tunisia Annual Meeting 4.0
+This congress is specifically designed for the practicing engineer interested in this field, and emphasizes professional development.
+
+19/12/2022 – 21/12/2022, Monastir, Tunisia
+AIESEC NATCO National Conference
+AIESEC NatCo is a national conference organized by AIESEC to bring together young leaders and members from across the country.
+
+VOLUNTEERING
+• Founder and President – ARSII ISIMG: Association de Recherche et d'Innovation en Informatique (2025 & 2026)
+• Founder and Chairwoman – IEEE ISIMG IAS Student Branch Chapter (2024–2025)
+• Vice Chair – IEEE ISIMG Student Branch (2024)
+• Content Creator – IEEE WIE Collaboratec (2025)
+• Member – JCI Gabès (2025)
+• Member – AIESEC Tacapes (2022–2024)
+• Tunisian Red Crescent Volunteer (2019 & 2023)
+    `
+
+    // Create a blob with the content
+    const blob = new Blob([pdfContent], { type: "text/plain" })
+    const url = window.URL.createObjectURL(blob)
+
+    // Create a temporary link and trigger download
+    const link = document.createElement("a")
+    link.href = url
+    link.download = "Rakia_Souei_CV.txt"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    window.URL.revokeObjectURL(url)
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSkill((prev) => (prev + 1) % skills.length)
@@ -110,8 +238,13 @@ export default function CVPage() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                <User className="w-16 h-16 text-white" />
+              <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <img
+                  src="/images/rakia-photo.png"
+                  alt="Rakia Souei - Software Engineering Student"
+                  className="w-full h-full object-cover"
+                  crossOrigin="anonymous"
+                />
               </div>
             </motion.div>
 
@@ -1068,9 +1201,9 @@ export default function CVPage() {
               <div className="sticky top-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-6 flex justify-between items-center">
                 <h2 className="text-2xl font-bold">Curriculum Vitae</h2>
                 <div className="flex gap-2">
-                  <Button onClick={() => window.print()} className="bg-blue-600 hover:bg-blue-700 text-white">
+                  <Button onClick={downloadPDF} className="bg-blue-600 hover:bg-blue-700 text-white">
                     <Download className="w-4 h-4 mr-2" />
-                    Print/Save PDF
+                    Download CV
                   </Button>
                   <Button
                     variant="outline"
@@ -1088,6 +1221,14 @@ export default function CVPage() {
                 <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
                   <h1 className="text-4xl font-bold mb-2">Rakia Souei</h1>
                   <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">Software Engineering Student</p>
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700">
+                    <img
+                      src="/images/rakia-photo.png"
+                      alt="Rakia Souei"
+                      className="w-full h-full object-cover"
+                      crossOrigin="anonymous"
+                    />
+                  </div>
                   <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-300">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
