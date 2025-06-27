@@ -432,8 +432,8 @@ export default function CVPage() {
                   github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
                 },
                 {
-                  title: "IEEE ISIMG Student Branch Website",
-                  description: "Official website for IEEE student branch with modern design and functionality",
+                  title: "IEEE ISIMG IAS Student Branch Chapter  Website",
+                  description: "Official website for IEEE student branch Chapter with modern design and functionality",
                   tags: ["Web Development", "React", "IEEE", "Community"],
                   color: "from-purple-500 to-pink-600",
                   github: "https://ias-isimg.ieee.tn/",
