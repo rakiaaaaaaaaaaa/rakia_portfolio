@@ -51,131 +51,13 @@ export default function CVPage() {
   }
 
   const downloadPDF = () => {
-    // Create PDF content as a formatted text document
-    const pdfContent = `
-RAKIA SOUEI
-Software Engineering Student
-
-CONTACT INFORMATION
-Date of birth: 21/11/2001
-Nationality: Tunisian
-Gender: Female
-Phone: (+216) 51137455
-Email: rakia.souei@gmail.com
-Website: https://rakia-souei.vercel.app/
-LinkedIn: https://www.linkedin.com/in/rakia-souei-b98a0822b/
-GitHub: https://github.com/rakiaaaaaaaaaaa
-Address: Tunisia
-
-ABOUT ME
-A final-year software engineering student passionate about exploring new technologies, AI, and Web3. I am currently working on an entrepreneurial project and enjoy engaging in social and community activities that leverage technology to solve humanitarian challenges in my local community. I'm always eager to get involved in new projects and opportunities that expand my network and knowledge. I am now seeking an opportunity to join your team and contribute meaningfully.
-
-EDUCATION AND TRAINING
-01/09/2023 – CURRENT
-SOFTWARE ENGINEERING
-Higher Institute of Computing and Multimedia of Gabès, Tunisia
-
-15/09/2021 – 01/06/2023
-PREPARATORY CYCLE
-Higher Institute of Computing and Multimedia of Gabès, Tunisia
-
-PROFESSIONAL EXPERIENCE
-01/07/2024 – 30/08/2024
-INTERNSHIP - Emertex, India
-
-01/08/2024 – 15/08/2024
-INTERNSHIP - MG MAXI, Gabes, Tunisia
-
-LANGUAGE SKILLS
-Mother tongue: Arabic
-Other languages: English | French
-
-TECHNICAL SKILLS
-Programming Languages: Python, Java, JavaScript, PHP, HTML, CSS, SQL
-Frameworks & Technologies: React.js, Flutter, Symfony, WordPress, Deep Learning, Generative AI, Natural Language Processing, IoT & Embedded Systems, Web3, Hedera Tech
-Tools & Design: Git & GitHub, Figma, Photoshop, Canva, ISTQB Basics
-Methodologies: AGILE Principles, Scrum Fundamentals
-Leadership & Management: Event Organization, Leadership
-
-TECHNICAL PROJECTS
-• IEEE ISIMG Student Branch Website: https://ias-isimg.ieee.tn/
-• IEEE ISIMG Student Branch Chapter Website: https://ias-isimg.ieee.tn/
-• Deep Learning Spinal Cord Segmentation: https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation
-• IoT Smart House: https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house
-• Calendar Application: https://github.com/rakiaaaaaaaaaaa/Calendar-App
-• Painting Application: https://github.com/rakiaaaaaaaaaaa/Painting-Application
-• Game Puzzle: https://github.com/rakiaaaaaaaaaaa/Game-Puzzle
-• Movie Application: https://github.com/rakiaaaaaaaaaaa/Movie-app
-
-CERTIFICATES
-
-AI & Data Science:
-• NVIDIA: Generative AI with Diffusion Models
-• IBM: Python 101 for Data Science
-• The NGB: General AI Basics and NLP
-
-Software & Web Development:
-• IEEE Computer Society: Flutter Training Bootcamp
-• IBM: Python 101 for Data Science
-• The Hashgraph Developer Course
-• WordPress
-
-Agile & Project Management:
-• Scrum Fundamentals Certified (SFC)
-• IEEE Mentorship Program
-• 4C FSG: Training in Negotiation Techniques
-
-Innovation & Entrepreneurship:
-• Avila University: Innovation & Entrepreneurship
-• Dar Blockchain Friday Program
-
-HONOURS AND AWARDS
-• DevHACH AI Hackathon – Second Place Winner 2024 – Gabes University
-• Winner, IEEE R8 CS SYP "Share Your Journey" Contest – 2024 – IEEE Computer Society
-• Inspiring Student Ambassador – 2024 – IEEE Region 8 Special Interest Group on Humanitarian Technology
-• Student Entrepreneur Status – Nominated 2025 – University of Gabès
-• Chair of the Organizing Committee, Ecoguardians Competition 1.0 – 2024 – IEEE
-• Volunteered on the Organizing Committee, Gabes Cinema Fan Festival – 2024 & 2025 – Gabes Cinema Fan
-
-CONFERENCES AND SEMINARS
-30/11/2024 – 03/12/2024, Cairo, Egypt
-IEEE Computer Society R8 Congress
-IEEE CS R8 SYP is an international congress that gathers engineers and professionals from around the world, where SYP stands for Students and Young Professionals.
-
-15/10/2024 – 16/10/2024, Hammamet, Tunisia
-IEEE Women In Engineering Annual Congress of Tunisia 4.0
-WIE Annual Congress of Tunisia is a conference that promotes the missions, purposes, and visions of IEEE and Women in Engineering.
-
-13/10/2024 – 15/10/2024, Sousse, Tunisia
-IEEE Industry Applications Society Tunisia Annual Meeting 4.0
-This congress is specifically designed for the practicing engineer interested in this field, and emphasizes professional development.
-
-19/12/2022 – 21/12/2022, Monastir, Tunisia
-AIESEC NATCO National Conference
-AIESEC NatCo is a national conference organized by AIESEC to bring together young leaders and members from across the country.
-
-VOLUNTEERING
-• Founder and President – ARSII ISIMG: Association de Recherche et d'Innovation en Informatique (2025 & 2026)
-• Founder and Chairwoman – IEEE ISIMG IAS Student Branch Chapter (2024–2025)
-• Vice Chair – IEEE ISIMG Student Branch (2024)
-• Content Creator – IEEE WIE Collaboratec (2025)
-• Member – JCI Gabès (2025)
-• Member – AIESEC Tacapes (2022–2024)
-• Tunisian Red Crescent Volunteer (2019 & 2023)
-    `
-
-    // Create a blob with the content
-    const blob = new Blob([pdfContent], { type: "text/plain" })
-    const url = window.URL.createObjectURL(blob)
-
-    // Create a temporary link and trigger download
+    // Download the PDF file from the public folder
     const link = document.createElement("a")
-    link.href = url
-    link.download = "Rakia_Souei_CV.txt"
+    link.href = "/rakia_souei_2025.pdf"
+    link.download = "Rakia_Souei_CV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    window.URL.revokeObjectURL(url)
   }
 
   useEffect(() => {
@@ -328,7 +210,7 @@ VOLUNTEERING
               <motion.div variants={fadeInUp}>
                 <Card className="p-8 h-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 border-0 shadow-xl">
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">My Story</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Who am I ?</h3>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                       I'm a final-year software engineering student passionate about exploring new technologies, AI, and
                       Web3. Based in Tunisia, I'm currently working on an entrepreneurial project and enjoy engaging in
@@ -345,7 +227,7 @@ VOLUNTEERING
               <motion.div variants={fadeInUp}>
                 <Card className="p-8 h-full bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 border-0 shadow-xl">
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Fun Facts</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Quick Facts</h3>
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5 text-blue-500" />
@@ -353,7 +235,7 @@ VOLUNTEERING
                       </div>
                       <div className="flex items-center gap-3">
                         <Calendar className="w-5 h-5 text-green-500" />
-                        <span>Born November 21, 2001</span>
+                        <span>Born in 2000</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Award className="w-5 h-5 text-purple-500" />
@@ -1223,7 +1105,7 @@ VOLUNTEERING
                   <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">Software Engineering Student</p>
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700">
                     <img
-                      src="/images/rakia-photo.png"
+                      src="/1.png"
                       alt="Rakia Souei"
                       className="w-full h-full object-cover"
                       crossOrigin="anonymous"
@@ -1253,6 +1135,8 @@ VOLUNTEERING
                   </div>
                   <div className="mt-4 text-sm text-gray-500">
                     <p>Born: November 21, 2001 | Nationality: Tunisian | Phone: (+216) 51137455</p>
+                    <p>Gender: Female</p>
+                    <p>Address: Tunisia (Home)</p>
                   </div>
                 </div>
 
@@ -1269,6 +1153,9 @@ VOLUNTEERING
                     projects and opportunities that expand network and knowledge while contributing meaningfully to
                     innovative solutions.
                   </p>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                    Date of birth: 21/11/2001
+                  </p>
                 </div>
 
                 {/* Technical Skills */}
@@ -1280,29 +1167,19 @@ VOLUNTEERING
                     <div>
                       <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">Programming Languages</h3>
                       <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>• Python, Java, JavaScript</li>
-                        <li>• PHP, HTML, CSS</li>
-                        <li>• SQL</li>
+                        <li>• Python, Java, JavaScript, PHP, HTML, CSS, SQL</li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">Frameworks & Technologies</h3>
                       <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>• React.js, Flutter</li>
-                        <li>• Symfony, WordPress</li>
-                        <li>• Deep Learning, Generative AI</li>
-                        <li>• Natural Language Processing</li>
-                        <li>• IoT & Embedded Systems</li>
-                        <li>• Web3, Hedera Tech</li>
+                        <li>• React.js, Flutter, Symfony, WordPress, Deep Learning, Generative AI, Natural Language Processing, IoT & Embedded Systems, Web3, Hedera Tech</li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">Tools & Methodologies</h3>
                       <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>• Git & GitHub</li>
-                        <li>• Figma, Photoshop, Canva</li>
-                        <li>• AGILE Principles, Scrum</li>
-                        <li>• ISTQB Basics</li>
+                        <li>• Git & GitHub, Figma, Photoshop, Canva, ISTQB Basics, AGILE Principles, Scrum Fundamentals</li>
                       </ul>
                     </div>
                   </div>
@@ -1572,7 +1449,7 @@ VOLUNTEERING
         <footer className="py-8 px-4 bg-gray-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-gray-400">
-              © 2024 Rakia Souei. Built with React, Framer Motion, and TailwindCSS. Deployed on Vercel.
+             © 2024 Rakia Souei. All rights reserved.
             </p>
           </div>
         </footer>

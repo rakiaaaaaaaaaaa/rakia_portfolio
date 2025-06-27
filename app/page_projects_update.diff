@@ -1,0 +1,104 @@
+<<<<<<<
+  const projects = [
+    {
+      title: "Deep Learning Spinal Cord Segmentation",
+      description: "Advanced deep learning project for medical image segmentation using neural networks",
+      tags: ["Deep Learning", "Python", "Medical AI", "Computer Vision"],
+      color: "from-blue-500 to-purple-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation",
+    },
+    {
+      title: "IoT Smart House",
+      description: "Complete IoT solution for home automation with embedded systems and sensors",
+      tags: ["IoT", "Embedded Systems", "Arduino", "Sensors"],
+      color: "from-green-500 to-blue-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
+    },
+    {
+      title: "IEEE ISIMG Student Branch Website",
+      description: "Official website for IEEE student branch with modern design and functionality",
+      tags: ["Web Development", "React", "IEEE", "Community"],
+      color: "from-purple-500 to-pink-600",
+      github: "https://ias-isimg.ieee.tn/",
+    },
+    {
+      title: "Calendar Application",
+      description: "Feature-rich calendar application with event management and scheduling",
+      tags: ["React", "JavaScript", "UI/UX", "Productivity"],
+      color: "from-orange-500 to-red-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Calendar-App",
+    },
+    {
+      title: "Movie Application",
+      description: "Interactive movie database application with search and recommendation features",
+      tags: ["React", "API Integration", "Entertainment", "UI/UX"],
+      color: "from-teal-500 to-cyan-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Movie-app",
+    },
+    {
+      title: "Painting Application",
+      description: "Digital painting and drawing application with various tools and brushes",
+      tags: ["JavaScript", "Canvas API", "Creative", "Art"],
+      color: "from-pink-500 to-rose-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Painting-Application",
+    },
+  ]
+=======
+  const projects = [
+    {
+      title: "Deep Learning Spinal Cord Segmentation",
+      description: "Advanced deep learning project for medical image segmentation using neural networks",
+      tags: ["Deep Learning", "Python", "Medical AI", "Computer Vision"],
+      color: "from-blue-500 to-purple-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation",
+    },
+    {
+      title: "IoT Smart House",
+      description: "Complete IoT solution for home automation with embedded systems and sensors",
+      tags: ["IoT", "Embedded Systems", "Arduino", "Sensors"],
+      color: "from-green-500 to-blue-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
+    },
+    {
+      title: "IEEE ISIMG Student Branch Website",
+      description: "Official website for IEEE student branch with modern design and functionality",
+      tags: ["Web Development", "React", "IEEE", "Community"],
+      color: "from-purple-500 to-pink-600",
+      github: "https://ias-isimg.ieee.tn/",
+    },
+    {
+      title: "IEEE ISIMG Student Branch Chapter Website",
+      description: "Website for IEEE ISIMG Student Branch Chapter",
+      tags: ["Web Development", "React", "IEEE", "Community"],
+      color: "from-purple-600 to-pink-700",
+      github: "https://ias-isimg.ieee.tn/",
+    },
+    {
+      title: "Calendar Application",
+      description: "Feature-rich calendar application with event management and scheduling",
+      tags: ["React", "JavaScript", "UI/UX", "Productivity"],
+      color: "from-orange-500 to-red-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Calendar-App",
+    },
+    {
+      title: "Painting Application",
+      description: "Digital painting and drawing application with various tools and brushes",
+      tags: ["JavaScript", "Canvas API", "Creative", "Art"],
+      color: "from-pink-500 to-rose-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Painting-Application",
+    },
+    {
+      title: "Game Puzzle",
+      description: "Puzzle game application with engaging gameplay",
+      tags: ["JavaScript", "Game Development", "UI/UX"],
+      color: "from-yellow-500 to-orange-500",
+      github: "https://github.com/rakiaaaaaaaaaaa/Game-Puzzle",
+    },
+    {
+      title: "Movie Application",
+      description: "Interactive movie database application with search and recommendation features",
+      tags: ["React", "API Integration", "Entertainment", "UI/UX"],
+      color: "from-teal-500 to-cyan-600",
+      github: "https://github.com/rakiaaaaaaaaaaa/Movie-app",
+    },
+  ]

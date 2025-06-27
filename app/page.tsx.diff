@@ -1,0 +1,29 @@
+<<<<<<<
+  const skills = ["Software Engineering Student", "AI Enthusiast", "Web3 Explorer", "Community Leader"]
+=======
+  const skills = [
+    "canva",
+    "Wordpress",
+    "ISTQB Basics",
+    "Photoshop And Figma",
+    "Scrum Fundamentals",
+    "IoT & Embedded Systems",
+    "React.js",
+    "Flutter",
+    "Deep learning",
+    "Generative AI",
+    "Natural Language Processing",
+    "Git & GitHub",
+    "AGILE principles",
+    "PHP",
+    "python",
+    "symfony",
+    "SQL",
+    "web3",
+    "hedera tech",
+    "Leadership",
+    "Event Organization",
+    "HTML",
+    "JavaScript",
+    "Java",
+  ]
