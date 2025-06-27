@@ -240,7 +240,7 @@ VOLUNTEERING
             >
               <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <img
-                  src="public/1.png"
+                  src="/1.png"
                   alt="Rakia Souei - Software Engineering Student"
                   className="w-full h-full object-cover"
                   crossOrigin="anonymous"
