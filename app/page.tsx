@@ -527,16 +527,7 @@ export default function CVPage() {
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600"></div>
 
               {[
-                {
-                  title: "Founder and President",
-                  company: "ARSII ISIMG - Association de Recherche et d'Innovation en Informatique",
-                  period: "2025 - 2026",
-                  achievements: [
-                    "Founded and leading a research and innovation association in computer science",
-                    "Organizing workshops and seminars on emerging technologies",
-                    "Building partnerships with industry professionals and academic institutions",
-                  ],
-                },
+                
                 {
                   title: "Founder and Chairwoman",
                   company: "IEEE ISIMG IAS Student Branch Chapter",
