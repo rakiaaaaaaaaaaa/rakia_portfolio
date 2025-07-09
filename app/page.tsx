@@ -455,7 +455,7 @@ export default function CVPage() {
                 {
                   title: "Painting Application",
                   description: "Digital painting and drawing application with various tools and brushes",
-                  tags: ["JavaScript", "Canvas API", "Creative", "Art"],
+                  tags: ["JavaScript", "Creative", "Art"],
                   color: "from-pink-500 to-rose-600",
                   github: "https://github.com/rakiaaaaaaaaaaa/Painting-Application",
                 },
