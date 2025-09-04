@@ -419,45 +419,45 @@ export default function CVPage() {
               {[
                 {
                   title: "Deep Learning Spinal Cord Segmentation",
-                  description: "Advanced deep learning project for medical image segmentation using neural networks",
-                  tags: ["Deep Learning", "Python", "Medical AI", "Computer Vision"],
+                  description: "Developed a comprehensive pipeline for automated spinal cord segmentation in 3D MRI using a U-Net architecture, achieving 85.53% Dice coefficient and 87.42% IoU. Integrated CSA prediction with demographic modeling and developed a Flutter mobile app for clinical usage.",
+                  tags: ["Deep Learning", "U-Net", "Medical AI", "Flutter", "3D MRI"],
                   color: "from-blue-500 to-purple-600",
                   github: "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation",
                 },
                 {
-                  title: "IoT Smart House",
-                  description: "Complete IoT solution for home automation with embedded systems and sensors",
-                  tags: ["IoT", "Embedded Systems", "Arduino", "Sensors"],
+                  title: "IoT Smart House System",
+                  description: "Simulated a smart home automation system using Arduino, Blynk IoT platform, and Picsimlab simulator. Features include temperature monitoring with automated heater/cooler control, LDR-based garden lighting, and water tank management with a real-time mobile interface.",
+                  tags: ["IoT", "Arduino", "Blynk", "Smart Home", "Automation"],
                   color: "from-green-500 to-blue-600",
                   github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
                 },
                 {
-                  title: "IEEE ISIMG IAS Student Branch Chapter  Website",
-                  description: "Official website for IEEE student branch Chapter with modern design and functionality",
-                  tags: ["Web Development", "React", "IEEE", "Community"],
+                  title: "Breast Cancer Detection using Deep Learning",
+                  description: "Developed a deep learning model for breast cancer classification using medical imaging datasets. Integrated model into a web interface for live demo and visualization.",
+                  tags: ["Deep Learning", "Medical AI", "Cancer Detection", "Web Demo"],
+                  color: "from-red-500 to-pink-600",
+                  github: "https://github.com/rakiaaaaaaaaaaa/Breast-cancer-AI",
+                },
+                {
+                  title: "Skin Cancer Detection using Deep Learning",
+                  description: "Implemented a convolutional neural network to classify various types of skin lesions using image datasets. Achieved high accuracy and deployed as an interactive web demo.",
+                  tags: ["CNN", "Medical AI", "Skin Cancer", "Classification", "Web Demo"],
+                  color: "from-orange-500 to-red-600",
+                  github: "https://github.com/rakiaaaaaaaaaaa/skin-cancer-classification",
+                },
+                {
+                  title: "IEEE ISIMG IAS Chapter Website",
+                  description: "Developed the official website for the IEEE ISIMG IAS Chapter, using React.js, Tailwind CSS, and JavaScript to create a dynamic, responsive, and user-friendly platform for members and visitors. Features include interactive sections, event updates, and easy navigation.",
+                  tags: ["React.js", "Tailwind CSS", "IEEE", "Responsive Design"],
                   color: "from-purple-500 to-pink-600",
                   github: "https://ias-isimg.ieee.tn/",
                 },
                 {
-                  title: "Calendar Application",
-                  description: "Feature-rich calendar application with event management and scheduling",
-                  tags: ["React", "JavaScript", "UI/UX", "Productivity"],
-                  color: "from-orange-500 to-red-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/Calendar-App",
-                },
-                {
-                  title: "Movie Application",
-                  description: "Interactive movie database application with search and recommendation features",
-                  tags: ["React", "API Integration", "Entertainment", "UI/UX"],
-                  color: "from-teal-500 to-cyan-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/Movie-app",
-                },
-                {
-                  title: "Painting Application",
-                  description: "Digital painting and drawing application with various tools and brushes",
-                  tags: ["JavaScript", "Creative", "Art"],
-                  color: "from-pink-500 to-rose-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/Painting-Application",
+                  title: "IEEE ISIMG Student Branch Website",
+                  description: "Designed and developed the official website for the IEEE ISIMG Student Branch, serving as a hub for events, announcements, and member engagement.",
+                  tags: ["Web Development", "IEEE", "Community", "Events"],
+                  color: "from-indigo-500 to-purple-600",
+                  github: "https://isimg.ieee.tn/",
                 },
               ].map((project, index) => (
                 <motion.div key={project.title} variants={fadeInUp}>
@@ -527,7 +527,16 @@ export default function CVPage() {
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600"></div>
 
               {[
-                
+                {
+                  title: "Software Development Intern",
+                  company: "Squad Crafter - Gabes, Tunisia",
+                  period: "July 2025",
+                  achievements: [
+                    "Contributed to the development of a smart university educational platform using Django, Vue.js, and AI",
+                    "Designed features to improve accessibility, interactivity, and learning outcomes",
+                    "Strengthened expertise in full-stack development and AI-driven applications for education",
+                  ],
+                },
                 {
                   title: "Founder and Chairwoman",
                   company: "IEEE ISIMG IAS Student Branch Chapter",
@@ -539,6 +548,16 @@ export default function CVPage() {
                   ],
                 },
                 {
+                  title: "Software Development Intern",
+                  company: "MG MAXI - Gabes, Tunisia",
+                  period: "August 2024",
+                  achievements: [
+                    "Supported ERP-related tasks and contributed to digital transformation initiatives",
+                    "Applied programming skills to address local business requirements",
+                    "Enhanced understanding of business processes and software integration in administration and management contexts",
+                  ],
+                },
+                {
                   title: "Software Engineering Intern",
                   company: "Emertex - India",
                   period: "July 2024 - August 2024",
@@ -546,16 +565,6 @@ export default function CVPage() {
                     "Worked on software development projects in an international environment",
                     "Gained experience in agile development methodologies",
                     "Collaborated with cross-cultural teams on technical solutions",
-                  ],
-                },
-                {
-                  title: "Technical Intern",
-                  company: "MG MAXI - Gabes, Tunisia",
-                  period: "August 2024",
-                  achievements: [
-                    "Applied technical skills in a local business environment",
-                    "Worked on system optimization and technical support",
-                    "Contributed to digital transformation initiatives",
                   ],
                 },
                 {
@@ -1247,6 +1256,23 @@ export default function CVPage() {
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
+                          <h3 className="text-lg font-bold">Software Development Intern</h3>
+                          <p className="text-blue-600 dark:text-blue-400 font-semibold">Squad Crafter - Gabes, Tunisia</p>
+                        </div>
+                        <span className="text-sm text-gray-500 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded">
+                          Jul 2025
+                        </span>
+                      </div>
+                      <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1 ml-4">
+                        <li>• Contributed to the development of a smart university educational platform using Django, Vue.js, and AI</li>
+                        <li>• Designed features to improve accessibility, interactivity, and learning outcomes</li>
+                        <li>• Strengthened expertise in full-stack development and AI-driven applications for education</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
                           <h3 className="text-lg font-bold">Founder and Chairwoman</h3>
                           <p className="text-blue-600 dark:text-blue-400 font-semibold">
                             IEEE ISIMG IAS Student Branch Chapter
@@ -1266,6 +1292,23 @@ export default function CVPage() {
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
+                          <h3 className="text-lg font-bold">Software Development Intern</h3>
+                          <p className="text-blue-600 dark:text-blue-400 font-semibold">MG MAXI - Gabes, Tunisia</p>
+                        </div>
+                        <span className="text-sm text-gray-500 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded">
+                          Aug 2024
+                        </span>
+                      </div>
+                      <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1 ml-4">
+                        <li>• Supported ERP-related tasks and contributed to digital transformation initiatives</li>
+                        <li>• Applied programming skills to address local business requirements</li>
+                        <li>• Enhanced understanding of business processes and software integration in administration and management contexts</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
                           <h3 className="text-lg font-bold">Software Engineering Intern</h3>
                           <p className="text-blue-600 dark:text-blue-400 font-semibold">Emertex - India</p>
                         </div>
@@ -1277,23 +1320,6 @@ export default function CVPage() {
                         <li>• Worked on software development projects in an international environment</li>
                         <li>• Gained experience in agile development methodologies</li>
                         <li>• Collaborated with cross-cultural teams on technical solutions</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <div className="flex justify-between items-start mb-2">
-                        <div>
-                          <h3 className="text-lg font-bold">Technical Intern</h3>
-                          <p className="text-blue-600 dark:text-blue-400 font-semibold">MG MAXI - Gabes, Tunisia</p>
-                        </div>
-                        <span className="text-sm text-gray-500 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded">
-                          Aug 2024
-                        </span>
-                      </div>
-                      <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1 ml-4">
-                        <li>• Applied technical skills in a local business environment</li>
-                        <li>• Worked on system optimization and technical support</li>
-                        <li>• Contributed to digital transformation initiatives</li>
                       </ul>
                     </div>
                   </div>
@@ -1308,35 +1334,95 @@ export default function CVPage() {
                     <div>
                       <h3 className="text-lg font-bold mb-1">Deep Learning Spinal Cord Segmentation</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                        Advanced deep learning project for medical image segmentation using neural networks
+                        Developed a comprehensive pipeline for automated spinal cord segmentation in 3D MRI using a U-Net architecture, achieving 85.53% Dice coefficient and 87.42% IoU. Integrated CSA prediction with demographic modeling and developed a Flutter mobile app for clinical usage.
                       </p>
                       <div className="flex flex-wrap gap-2 mb-2">
                         <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
                           Deep Learning
                         </span>
                         <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">
-                          Python
+                          U-Net
                         </span>
                         <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-xs">
                           Medical AI
+                        </span>
+                        <span className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded text-xs">
+                          Flutter
                         </span>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-bold mb-1">IoT Smart House</h3>
+                      <h3 className="text-lg font-bold mb-1">IoT Smart House System</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                        Complete IoT solution for home automation with embedded systems and sensors
+                        Simulated a smart home automation system using Arduino, Blynk IoT platform, and Picsimlab simulator. Features include temperature monitoring with automated heater/cooler control, LDR-based garden lighting, and water tank management with a real-time mobile interface.
                       </p>
                       <div className="flex flex-wrap gap-2 mb-2">
                         <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
                           IoT
                         </span>
                         <span className="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded text-xs">
-                          Embedded Systems
+                          Arduino
                         </span>
                         <span className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded text-xs">
-                          Arduino
+                          Blynk
+                        </span>
+                        <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">
+                          Smart Home
+                        </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold mb-1">Breast Cancer Detection using Deep Learning</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                        Developed a deep learning model for breast cancer classification using medical imaging datasets. Integrated model into a web interface for live demo and visualization.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
+                          Deep Learning
+                        </span>
+                        <span className="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded text-xs">
+                          Medical AI
+                        </span>
+                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-xs">
+                          Cancer Detection
+                        </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold mb-1">Skin Cancer Detection using Deep Learning</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                        Implemented a convolutional neural network to classify various types of skin lesions using image datasets. Achieved high accuracy and deployed as an interactive web demo.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
+                          CNN
+                        </span>
+                        <span className="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded text-xs">
+                          Medical AI
+                        </span>
+                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-xs">
+                          Classification
+                        </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold mb-1">IEEE ISIMG IAS Chapter Website</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                        Developed the official website for the IEEE ISIMG IAS Chapter, using React.js, Tailwind CSS, and JavaScript to create a dynamic, responsive, and user-friendly platform for members and visitors.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
+                          React.js
+                        </span>
+                        <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">
+                          Tailwind CSS
+                        </span>
+                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-xs">
+                          IEEE
                         </span>
                       </div>
                     </div>
@@ -1344,17 +1430,17 @@ export default function CVPage() {
                     <div>
                       <h3 className="text-lg font-bold mb-1">IEEE ISIMG Student Branch Website</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                        Official website for IEEE student branch with modern design and functionality
+                        Designed and developed the official website for the IEEE ISIMG Student Branch, serving as a hub for events, announcements, and member engagement.
                       </p>
                       <div className="flex flex-wrap gap-2 mb-2">
                         <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
                           Web Development
                         </span>
                         <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">
-                          React
+                          IEEE
                         </span>
                         <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-xs">
-                          IEEE
+                          Community
                         </span>
                       </div>
                     </div>
