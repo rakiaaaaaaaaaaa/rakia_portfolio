@@ -18,6 +18,36 @@ This is a modern personal portfolio website built with React and Next.js, styled
 - TypeScript
 - Vercel (for deployment)
 
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd rakia_portfolio
+```
+
+3. Install dependencies using pnpm:
+
+```bash
+pnpm install
+```
+
+## Usage
+
+To run the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ## Deployment
 
 The project is live at:  
@@ -32,6 +62,8 @@ https://rakia-souei.vercel.app/
 - `public/` - Static assets like images and icons
 - `styles/` - Global and component-specific styles
 
+## Contributing
 
+Contributions are welcome! Please open an issue or submit a pull request.
 
-
+## License
