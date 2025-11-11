@@ -38,7 +38,7 @@ export default function CVPage() {
     restDelta: 0.001,
   })
 
-  const skills = ["Software Engineering Student", "AI Enthusiast", "Web3 Explorer", "Community Leader"]
+  const skills = ["Software Engineering Student", "AI Enthusiast", "data scientist", "Community Leader"]
 
   const [showCVSection, setShowCVSection] = useState(false)
   const contactSectionRef = useRef<HTMLElement>(null)
@@ -212,13 +212,10 @@ export default function CVPage() {
                   <CardContent className="p-0">
                     <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Who am I ?</h3>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                      I'm a final-year software engineering student passionate about exploring new technologies, AI, and
-                      Web3. Based in Tunisia, I'm currently working on an entrepreneurial project and enjoy engaging in
-                      social and community activities that leverage technology to solve humanitarian challenges.
+                      I’m Rakia Souei, a final-year Software Engineering and Information Systems student passionate about innovation, leadership, and social impact. As Founder and President of the Association de Recherche Scientifique et Innovation en Informatique ISIMG 2025 and the IEEE ISIMG Student Branch, I’ve led initiatives connecting technology, research, and community.
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      I'm always eager to get involved in new projects and opportunities that expand my network and
-                      knowledge. I am now seeking an opportunity to join your team and contribute meaningfully.
+                      Recognized with awards like DevHack 2nd Place, IEEE CS Region 8 “Share Your Journey” Winner (2024), and IEEE Region 8 Inspiring Technology Ambassador (2025), I’m skilled in AI, Machine Learning, Deep Learning, Data Science, creating data-driven solutions that drive innovation and positive social impact.
                     </p>
                   </CardContent>
                 </Card>
@@ -230,20 +227,21 @@ export default function CVPage() {
                     <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Quick Facts</h3>
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
-                        <MapPin className="w-5 h-5 text-blue-500" />
-                        <span>Based in Tunisia</span>
+                        <Award className="w-5 h-5 text-purple-500" />
+                        <span>AI and Data Science Enthusiast</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <Calendar className="w-5 h-5 text-green-500" />
-                        <span>Born in 2000</span>
+                        <Award className="w-5 h-5 text-purple-500" />
+                        <span>President of the Association de Recherche Scientifique et Innovation en Informatique ISIMG 2025</span>
                       </div>
+
                       <div className="flex items-center gap-3">
                         <Award className="w-5 h-5 text-purple-500" />
                         <span>IEEE Contest Winner 2024</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Briefcase className="w-5 h-5 text-orange-500" />
-                        <span>Student Entrepreneur Nominee</span>
+                        <span>Student Entrepreneur Nominee 2025</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Globe className="w-5 h-5 text-red-500" />
@@ -291,10 +289,16 @@ export default function CVPage() {
                     </div>
                     <div className="space-y-4">
                       {[
-                        { name: "React.js & Flutter", level: 90 },
-                        { name: "Python & PHP", level: 85 },
-                        { name: "JavaScript & Java", level: 80 },
+                        { name: "Python", level: 90 },
+                        { name: "Java", level: 80 },
+                        { name: "JavaScript", level: 85 },
+                        { name: "Django & Symfony", level: 80 },
+                        { name: "React.js & Flutter", level: 70 },
+                        { name: "SQL & Databases", level: 80 },
+                        { name: "Git & GitHub", level: 90 },
+                        { name: "PHP", level: 75 },
                         { name: "HTML & CSS", level: 95 },
+                        { name: "Testing", level: 70 },
                       ].map((skill, index) => (
                         <div key={skill.name}>
                           <div className="flex justify-between mb-2">
@@ -327,10 +331,17 @@ export default function CVPage() {
                     </div>
                     <div className="space-y-4">
                       {[
-                        { name: "Deep Learning", level: 85 },
-                        { name: "Generative AI", level: 80 },
-                        { name: "Natural Language Processing", level: 75 },
-                        { name: "SQL & Databases", level: 80 },
+       { name: "Deep Learning", level: 85 },
+          { name: "Generative AI", level: 80 },
+          { name: "Natural Language Processing (NLP)", level: 75 },
+          { name: "NVIDIA Diffusion Models", level: 70 },
+          { name: "Predictive Analytics", level: 80 },
+          { name: "Data Visualization", level: 85 },
+          { name: "TensorFlow & Keras", level: 80 },
+          { name: "PyTorch", level: 70 },
+          { name: "Scikit-learn", level: 75 },
+          { name: "Power BI & Tableau", level: 75 },
+          { name: "Matplotlib & Seaborn", level: 80 },
                       ].map((skill, index) => (
                         <div key={skill.name}>
                           <div className="flex justify-between mb-2">
@@ -363,10 +374,17 @@ export default function CVPage() {
                     </div>
                     <div className="space-y-4">
                       {[
-                        { name: "Git & GitHub", level: 90 },
-                        { name: "Web3 & Hedera", level: 75 },
-                        { name: "IoT & Embedded Systems", level: 80 },
-                        { name: "Figma & Photoshop", level: 85 },
+          { name: "WordPress", level: 85 },
+          { name: "Figma & Photoshop", level: 85 },
+          { name: "Canva", level: 80 },
+          { name: "Big Data", level: 75 },
+          { name: "Cloud", level: 75 },
+          { name: "Power BI", level: 70 },
+          { name: "Agile & Scrum", level: 80 },
+          { name: "ERP Systems", level: 70 },
+          { name: "Financial Modeling", level: 70 },
+          { name: "Business Intelligence", level: 75 },
+          { name: "Project Management", level: 80 },
                       ].map((skill, index) => (
                         <div key={skill.name}>
                           <div className="flex justify-between mb-2">
@@ -393,118 +411,129 @@ export default function CVPage() {
         </section>
 
         {/* Projects Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
-                <FolderOpen className="w-8 h-8 text-blue-600" />
-                Featured Projects
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
-            </motion.div>
+<section className="py-20 px-4">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      className="text-center mb-16"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+        <FolderOpen className="w-8 h-8 text-blue-600" />
+        Featured Projects
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+    </motion.div>
 
-            <motion.div
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              {[
-                {
-                  title: "Deep Learning Spinal Cord Segmentation",
-                  description: "Developed a comprehensive pipeline for automated spinal cord segmentation in 3D MRI using a U-Net architecture, achieving 85.53% Dice coefficient and 87.42% IoU. Integrated CSA prediction with demographic modeling and developed a Flutter mobile app for clinical usage.",
-                  tags: ["Deep Learning", "U-Net", "Medical AI", "Flutter", "3D MRI"],
-                  color: "from-blue-500 to-purple-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation",
-                },
-                {
-                  title: "IoT Smart House System",
-                  description: "Simulated a smart home automation system using Arduino, Blynk IoT platform, and Picsimlab simulator. Features include temperature monitoring with automated heater/cooler control, LDR-based garden lighting, and water tank management with a real-time mobile interface.",
-                  tags: ["IoT", "Arduino", "Blynk", "Smart Home", "Automation"],
-                  color: "from-green-500 to-blue-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
-                },
-                {
-                  title: "Breast Cancer Detection using Deep Learning",
-                  description: "Developed a deep learning model for breast cancer classification using medical imaging datasets. Integrated model into a web interface for live demo and visualization.",
-                  tags: ["Deep Learning", "Medical AI", "Cancer Detection", "Web Demo"],
-                  color: "from-red-500 to-pink-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/Breast-cancer-AI",
-                },
-                {
-                  title: "Skin Cancer Detection using Deep Learning",
-                  description: "Implemented a convolutional neural network to classify various types of skin lesions using image datasets. Achieved high accuracy and deployed as an interactive web demo.",
-                  tags: ["CNN", "Medical AI", "Skin Cancer", "Classification", "Web Demo"],
-                  color: "from-orange-500 to-red-600",
-                  github: "https://github.com/rakiaaaaaaaaaaa/skin-cancer-classification",
-                },
-                {
-                  title: "IEEE ISIMG IAS Chapter Website",
-                  description: "Developed the official website for the IEEE ISIMG IAS Chapter, using React.js, Tailwind CSS, and JavaScript to create a dynamic, responsive, and user-friendly platform for members and visitors. Features include interactive sections, event updates, and easy navigation.",
-                  tags: ["React.js", "Tailwind CSS", "IEEE", "Responsive Design"],
-                  color: "from-purple-500 to-pink-600",
-                  github: "https://ias-isimg.ieee.tn/",
-                },
-                {
-                  title: "IEEE ISIMG Student Branch Website",
-                  description: "Designed and developed the official website for the IEEE ISIMG Student Branch, serving as a hub for events, announcements, and member engagement.",
-                  tags: ["Web Development", "IEEE", "Community", "Events"],
-                  color: "from-indigo-500 to-purple-600",
-                  github: "https://isimg.ieee.tn/",
-                },
-              ].map((project, index) => (
-                <motion.div key={project.title} variants={fadeInUp}>
-                  <Card className="group h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
-                    <CardContent className="p-0">
-                      <div
-                        className={`h-48 bg-gradient-to-br ${project.color} rounded-t-lg flex items-center justify-center`}
-                      >
-                        <Code className="w-16 h-16 text-white opacity-80" />
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
-                          {project.title}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="flex gap-3">
-                          <Button size="sm" variant="outline" className="flex-1" asChild>
-                            <a href={project.github} target="_blank" rel="noopener noreferrer">
-                              <Github className="w-4 h-4 mr-2" />
-                              Code
-                            </a>
-                          </Button>
-                          <Button size="sm" className="flex-1" asChild>
-                            <a href={project.github} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              View
-                            </a>
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+    <motion.div
+      className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
+      {[
+        {
+          title: "Deep Learning Spinal Cord Segmentation",
+          description:
+            "Developed a full pipeline for automated spinal cord segmentation in 3D MRI using U-Net, achieving 85.53% Dice and 87.42% IoU. Integrated CSA prediction, demographic modeling, and a Flutter mobile app for clinical deployment.",
+          tags: ["Deep Learning", "U-Net", "Medical AI", "Flutter", "3D MRI"],
+          color: "from-blue-500 to-purple-600",
+          github:
+            "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation",
+        },
+        {
+          title: "IoT Smart House System",
+          description:
+            "Simulated an IoT-based smart home using Arduino, Blynk, and PicsimLab. Automated temperature, garden lighting, and water management with a real-time mobile dashboard.",
+          tags: ["IoT", "Arduino", "Blynk", "Automation", "Smart Home"],
+          color: "from-green-500 to-blue-600",
+          github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
+        },
+        {
+          title: "Breast Cancer Detection using Deep Learning",
+          description:
+            "Built a medical image classification model for breast cancer detection and integrated it into an interactive web-based visualization platform.",
+          tags: ["Deep Learning", "Medical AI", "Cancer Detection", "Web App"],
+          color: "from-red-500 to-pink-600",
+          github: "https://github.com/rakiaaaaaaaaaaa/Breast-cancer-AI",
+        },
+        {
+          title: "Skin Cancer Detection using CNN",
+          description:
+            "Developed a CNN-based classifier for skin lesion images, achieving high diagnostic accuracy with a user-friendly web demo interface.",
+          tags: ["CNN", "Medical AI", "Skin Cancer", "Classification"],
+          color: "from-orange-500 to-red-600",
+          github:
+            "https://github.com/rakiaaaaaaaaaaa/skin-cancer-classification",
+        },
+        {
+          title: "IEEE ISIMG IAS Chapter Website",
+          description:
+            "Designed and developed the official IEEE ISIMG IAS website using React.js and Tailwind CSS. Includes responsive layout, interactive sections, and real-time event updates.",
+          tags: ["React.js", "Tailwind CSS", "IEEE", "Responsive Design"],
+          color: "from-purple-500 to-pink-600",
+          github: "https://ias-isimg.ieee.tn/",
+        },
+        {
+          title: "IEEE ISIMG Student Branch Website",
+          description:
+            "Created the official IEEE ISIMG Student Branch website to centralize events, news, and member engagement with a dynamic and accessible design.",
+          tags: ["Web Development", "IEEE", "Community", "Events"],
+          color: "from-indigo-500 to-purple-600",
+          github: "https://isimg.ieee.tn/",
+        },
+      ].map((project) => (
+        <motion.div key={project.title} variants={fadeInUp}>
+          <Card className="group h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+            <CardContent className="p-0">
+              <div
+                className={`h-48 bg-gradient-to-br ${project.color} rounded-t-lg flex items-center justify-center`}
+              >
+                <Code className="w-16 h-16 text-white opacity-80" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <Button size="sm" variant="outline" className="flex-1" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </a>
+                  </Button>
+                  <Button size="sm" className="flex-1" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
         {/* Experience Section */}
         <section className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
@@ -527,55 +556,86 @@ export default function CVPage() {
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600"></div>
 
               {[
-                {
-                  title: "Software Development Intern",
-                  company: "Squad Crafter - Gabes, Tunisia",
-                  period: "July 2025",
-                  achievements: [
-                    "Contributed to the development of a smart university educational platform using Django, Vue.js, and AI",
-                    "Designed features to improve accessibility, interactivity, and learning outcomes",
-                    "Strengthened expertise in full-stack development and AI-driven applications for education",
-                  ],
-                },
-                {
-                  title: "Founder and Chairwoman",
-                  company: "IEEE ISIMG IAS Student Branch Chapter",
-                  period: "2024 - 2025",
-                  achievements: [
-                    "Established and managing IEEE Industry Applications Society student chapter",
-                    "Organizing technical events and professional development workshops",
-                    "Leading a team of student volunteers and coordinating chapter activities",
-                  ],
-                },
-                {
-                  title: "Software Development Intern",
-                  company: "MG MAXI - Gabes, Tunisia",
-                  period: "August 2024",
-                  achievements: [
-                    "Supported ERP-related tasks and contributed to digital transformation initiatives",
-                    "Applied programming skills to address local business requirements",
-                    "Enhanced understanding of business processes and software integration in administration and management contexts",
-                  ],
-                },
-                {
-                  title: "Software Engineering Intern",
-                  company: "Emertex - India",
-                  period: "July 2024 - August 2024",
-                  achievements: [
-                    "Worked on software development projects in an international environment",
-                    "Gained experience in agile development methodologies",
-                    "Collaborated with cross-cultural teams on technical solutions",
-                  ],
-                },
-                {
-                  title: "Vice Chair",
-                  company: "IEEE ISIMG Student Branch",
-                  period: "2024",
-                  achievements: [
-                    "Supported branch operations and member engagement activities",
-                    "Coordinated events and technical workshops for students",
-                    "Mentored junior members and promoted IEEE values",
-                  ],
+  {
+    title: "Django Developer Intern",
+    company: "Squad Crafter - Gabes, Tunisia",
+    period: "July 2025",
+    achievements: [
+      "Contributed to the development of a smart university educational platform using Django, Vue.js, and AI",
+      "Designed features enhancing accessibility, interactivity, and overall user experience",
+      "Strengthened expertise in full-stack development and AI-driven educational applications",
+    ],
+  },
+  {
+    title: "Software Development Intern",
+    company: "TS Import Tunisia",
+    period: "June 2025 - August 2025",
+    achievements: [
+      "Developed the backend of an E-commerce platform using Django and REST APIs",
+      "Implemented database models, authentication systems, and data validation mechanisms",
+      "Improved performance and security of backend services through clean code practices",
+    ],
+  },
+  {
+    title: "Agile and Business Intern",
+    company: "MG MAXI - Gabes, Tunisia",
+    period: "August 2024",
+    achievements: [
+      "Explored ERP system implementation and digital transformation strategies",
+      "Created Excel-based financial dashboards and data visualization tools",
+      "Enhanced business optimization and performance tracking through data-driven insights",
+    ],
+  },
+  {
+    title: "IoT and Embedded Systems Intern",
+    company: "Emertxe - India",
+    period: "July 2024 - August 2024",
+    achievements: [
+      "Built a smart home automation system using Arduino, PICSimLab, and Blynk",
+      "Integrated sensors and actuators for temperature, lighting, and security control",
+      "Developed practical IoT solutions aligned with real-world automation needs",
+    ],
+  },
+    {
+    title: "Founder and President",
+    company: "ARSII – Association de Recherche Scientifique et Innovation en Informatique",
+    period: "2024 - 2025",
+    achievements: [
+      "Founded ARSII to promote scientific research and innovation in computer science and AI",
+      "Led projects in AI, robotics, and software development to foster student-led research",
+      "Organized national hackathons and conferences to encourage collaboration and innovation",
+    ],
+  },
+  {
+    title: "Founder and Chairwoman",
+    company: "IEEE ISIMG IAS Student Branch Chapter",
+    period: "2024 - 2025",
+    achievements: [
+      "Founded and led the IEEE IAS Chapter at ISIMG",
+      "Organized technical workshops, hackathons, and professional development events",
+      "Managed a multidisciplinary team and fostered collaboration among students",
+    ],
+  },
+  {
+    title: "Founder and Chair",
+    company: "IEEE SIGHT (Special Interest Group on Humanitarian Technology) – ISIMG",
+    period: "2024 - 2025",
+    achievements: [
+      "Established and led the IEEE SIGHT group at ISIMG to promote technology-based humanitarian innovation",
+      "Launched community-driven projects integrating AI, IoT, and sustainability solutions",
+      "Collaborated with local and international IEEE groups to expand humanitarian impact",
+    ],
+  },
+
+  {
+    title: "Vice Chair",
+    company: "IEEE ISIMG Student Branch",
+    period: "2024",
+    achievements: [
+      "Assisted in branch operations and coordinated technical and social events",
+      "Mentored new IEEE members and strengthened community engagement",
+      "Supported project planning and collaboration across IEEE chapters",
+    ],
                 },
               ].map((job, index) => (
                 <motion.div
@@ -655,7 +715,7 @@ export default function CVPage() {
                       </div>
                       <p className="text-sm text-gray-500 mb-3">September 2023 - Current</p>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Final-year software engineering student specializing in AI, Web3, and modern software
+                        Final-year software engineering student specializing in AI, data science, and modern software
                         development practices.
                       </p>
                     </CardContent>
@@ -885,10 +945,10 @@ export default function CVPage() {
                   color: "from-yellow-500 to-orange-600",
                 },
                 {
-                  title: "IEEE R8 CS SYP Contest Winner",
+                  title: "IEEE R8 Computer Society SYP Contest Winner",
                   organization: "IEEE Computer Society",
                   year: "2024",
-                  description: "Winner of Share Your Journey contest in Region 8",
+                  description: "Winner of the Share Your Journey contest in Region 8, attending in person in Cairo, Egypt.",
                   color: "from-blue-500 to-purple-600",
                 },
                 {
@@ -900,7 +960,7 @@ export default function CVPage() {
                 },
                 {
                   title: "Inspiring Student Ambassador",
-                  organization: "IEEE Region 8 SIG on Humanitarian Technology",
+                  organization: "IEEE Region 8 SIGHT on Humanitarian Technology",
                   year: "2024",
                   description: "Selected as ambassador for humanitarian technology initiatives",
                   color: "from-purple-500 to-pink-600",
@@ -1102,7 +1162,7 @@ export default function CVPage() {
                 {/* Personal Information */}
                 <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
                   <h1 className="text-4xl font-bold mb-2">Rakia Souei</h1>
-                  <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">Software Engineering Student</p>
+                  <p className="text-xl text-blue-600 dark:text-blue-400 mb-4"> Ai and Software Engineering Student</p>
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700">
                     <img
                       src="/1.png"
@@ -1134,9 +1194,8 @@ export default function CVPage() {
                     </div>
                   </div>
                   <div className="mt-4 text-sm text-gray-500">
-                    <p>Born: November 21, 2001 | Nationality: Tunisian | Phone: (+216) 51137455</p>
-                    <p>Gender: Female</p>
-                    <p>Address: Tunisia (Home)</p>
+                    <p>Phone: (+216) 51137455</p>
+                 
                   </div>
                 </div>
 
@@ -1146,16 +1205,14 @@ export default function CVPage() {
                     Professional Summary
                   </h2>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Final-year software engineering student passionate about exploring new technologies, AI, and Web3.
-                    Currently working on an entrepreneurial project and actively engaging in social and community
-                    activities that leverage technology to solve humanitarian challenges. Proven track record in
-                    leadership roles, hackathon competitions, and IEEE activities. Always eager to get involved in new
-                    projects and opportunities that expand network and knowledge while contributing meaningfully to
-                    innovative solutions.
+ Final-year Software Engineering and Information Systems student with demonstrated leadership as Founder and President
+ of the Association de Recherche Scientifique et Innovation en Informatique ISIMG 2025, and the IEEE ISIMG Student
+ Branch, including its IAS Chapter and SIGHT Group. Recipient of multiple international awards, including DevHack 2nd
+ Place, IEEE Computer Society Region 8 “Share Your Journey” Winner (Egypt, 2024), IEEE Region 8 Inspiring Technology
+ Ambassador (2025), and Student Entrepreneur of the Year (2025). Skilled in AI, Machine Learning, Deep Learning, Data
+ Science, Django, with a strong focus on innovation, entrepreneurship, and social impact.
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
-                    Date of birth: 21/11/2001
-                  </p>
+                
                 </div>
 
                 {/* Technical Skills */}
@@ -1526,7 +1583,7 @@ export default function CVPage() {
         <footer className="py-8 px-4 bg-gray-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-gray-400">
-             © 2024 Rakia Souei. All rights reserved.
+              © 2025 Rakia Souei. All rights reserved.
             </p>
           </div>
         </footer>
