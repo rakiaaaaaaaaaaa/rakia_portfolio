@@ -1230,7 +1230,7 @@ export default function CVPage() {
                     <div>
                       <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">Frameworks & Technologies</h3>
                       <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>• React.js, Flutter, Symfony, WordPress, Deep Learning, Generative AI, Natural Language Processing, IoT & Embedded Systems, Web3, Hedera Tech</li>
+                        <li>• React.js, Flutter, Symfony, WordPress, Deep Learning, Generative AI, Natural Language Processing</li>
                       </ul>
                     </div>
                     <div>
