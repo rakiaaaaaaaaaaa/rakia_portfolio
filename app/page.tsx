@@ -406,8 +406,13 @@ export default function CVPage() {
                 <motion.div key={project.title} variants={fadeInUp}>
                   <Card className="group h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
                     <CardContent className="p-0">
-                      <div className={`h-48 bg-gradient-to-br ${project.color} rounded-t-lg flex items-center justify-center`}>
-                        <Code className="w-16 h-16 text-white opacity-80" />
+                      <div className="relative h-48 overflow-hidden rounded-t-lg bg-gray-900">
+                        <img
+                          src={project.image}
+                          alt={`${project.title} project preview`}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-25`} />
                       </div>
                       <div className="p-6">
                         <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">

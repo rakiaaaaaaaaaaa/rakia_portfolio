@@ -115,6 +115,7 @@ export const projects = [
     color: "from-cyan-500 to-blue-600",
     github: "https://github.com/rakiaaaaaaaaaaa",
     demo: "",
+    image: "/projects/software-systems.png",
   },
   {
     title: "Deep Learning Spinal Cord Segmentation — Final Year Thesis",
@@ -124,6 +125,7 @@ export const projects = [
     color: "from-blue-500 to-purple-600",
     github: "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation",
     demo: "https://github.com/rakiaaaaaaaaaaa/Deep-Learning-Spinal-Cord-Segmentation/blob/main/PFA%20report%20document.pdf",
+    image: "/projects/medical-ai.png",
   },
   {
     title: "Soil Moisture Prediction — Geospatial ML (AI SMART Hackathon, 3rd Prize)",
@@ -133,6 +135,7 @@ export const projects = [
     color: "from-emerald-500 to-teal-600",
     github: "https://github.com/rakiaaaaaaaaaaa/Soil-Moisture-Prediction/",
     demo: "",
+    image: "/projects/geospatial-ml.png",
   },
   {
     title: "Breast Cancer Detection using Deep Learning",
@@ -142,6 +145,7 @@ export const projects = [
     color: "from-red-500 to-pink-600",
     github: "https://github.com/rakiaaaaaaaaaaa/Breast-cancer-AI",
     demo: "",
+    image: "/projects/medical-ai.png",
   },
   {
     title: "Skin Cancer Classification using CNN",
@@ -151,6 +155,7 @@ export const projects = [
     color: "from-orange-500 to-red-600",
     github: "https://github.com/rakiaaaaaaaaaaa/skin-cancer-classification",
     demo: "",
+    image: "/projects/medical-ai.png",
   },
   {
     title: "IoT Smart House System",
@@ -160,6 +165,7 @@ export const projects = [
     color: "from-green-500 to-blue-600",
     github: "https://github.com/rakiaaaaaaaaaaa/Iot_Smart_house",
     demo: "",
+    image: "/projects/iot-systems.png",
   },
   {
     title: "IEEE ISIMG IAS Chapter Website",
@@ -169,6 +175,7 @@ export const projects = [
     color: "from-purple-500 to-pink-600",
     github: "https://github.com/rakiaaaaaaaaaaa/IEEE-ISIMG-IAS-SBC",
     demo: "https://ias-isimg.ieee.tn/",
+    image: "/projects/software-systems.png",
   },
   {
     title: "IEEE ISIMG Student Branch Website",
@@ -178,6 +185,7 @@ export const projects = [
     color: "from-indigo-500 to-purple-600",
     github: "",
     demo: "https://isimg.ieee.tn/",
+    image: "/projects/software-systems.png",
   },
 ]
 

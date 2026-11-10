@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Rakia Souei - Portfolio',
-  description: 'Software Engineering Student passionate about AI, Web3, and innovation',
+  title: 'Rakia Souei | AI & Data Science Portfolio',
+  description: 'Portfolio of Rakia Souei, a software engineering and data science student, machine learning researcher, and community leader focused on AI for real-world impact.',
 }
 
 export default function RootLayout({
