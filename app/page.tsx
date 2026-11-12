@@ -61,13 +61,8 @@ export default function CVPage() {
     contactSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
-  const downloadPDF = () => {
-    const link = document.createElement("a")
-    link.href = personalInfo.cvFile
-    link.download = "Rakia_Souei_CV.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const openCVPDF = () => {
+    window.open(personalInfo.cvFile, "_blank", "noopener,noreferrer")
   }
 
   useEffect(() => {
@@ -192,12 +187,30 @@ export default function CVPage() {
               </motion.div>
 
               <motion.p
-                className="text-gray-200 text-lg mb-10 leading-relaxed max-w-lg"
+                className="text-gray-200 text-lg mb-3 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Software Engineer specializing in AI and Data Science, with completed MITACS Globalink research experience in predictive modeling and explainable machine learning.
+                Software Engineer specializing in AI &amp; Data Science
+              </motion.p>
+
+              <motion.p
+                className="text-gray-200 text-lg mb-3 leading-relaxed max-w-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                I develop intelligent, data-driven solutions by leveraging Artificial Intelligence, Machine Learning, and Software Engineering to transform complex challenges into practical innovations.
+              </motion.p>
+
+              <motion.p
+                className="text-blue-300 text-lg font-medium mb-10 leading-relaxed max-w-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                Turning data into insights. Turning ideas into intelligent solutions.
               </motion.p>
 
               <motion.div
@@ -211,7 +224,7 @@ export default function CVPage() {
                   onClick={() => setShowCVSection(true)}
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download CV
+                  View CV
                 </Button>
                 <Button
                   variant="outline"
@@ -947,9 +960,9 @@ export default function CVPage() {
               <div className="sticky top-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-6 flex justify-between items-center">
                 <h2 className="text-2xl font-bold">Curriculum Vitae</h2>
                 <div className="flex gap-2">
-                  <Button onClick={downloadPDF} className="bg-blue-600 hover:bg-blue-700 text-white">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download CV
+                  <Button onClick={openCVPDF} className="bg-blue-600 hover:bg-blue-700 text-white">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Open CV PDF
                   </Button>
                   <Button
                     variant="outline"
@@ -966,7 +979,7 @@ export default function CVPage() {
                 <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
                   <h1 className="text-4xl font-bold mb-2">{personalInfo.name}</h1>
                   <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">
-                    Software Engineering & Data Science — MITACS Globalink Researcher
+                    Software Engineer specializing in AI & Data Science
                   </p>
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700">
                     <img

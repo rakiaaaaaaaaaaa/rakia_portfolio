@@ -10,7 +10,7 @@ export const personalInfo = {
   title: "Software Engineer specializing in Artificial Intelligence and Data Science, with research experience in predictive modeling, optimization, and data-driven decision-making.",
   email: "rakia.souei@gmail.com",
   phone: "+216 51 137 455",
-  location: "Tunis, Tunisia",
+  location: "Montreal, Quebec, Canada",
   linkedin: "https://www.linkedin.com/in/rakia-souei-b98a0822b/",
   github: "https://github.com/rakiaaaaaaaaaaa",
   cvFile: "/rakia_souei_2026.pdf",
