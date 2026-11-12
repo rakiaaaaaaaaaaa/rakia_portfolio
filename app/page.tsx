@@ -178,7 +178,7 @@ export default function CVPage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <span className="mr-2 text-gray-300">A</span>
+                <span className="mr-2 text-gray-300">{currentSkill === 0 ? "An" : "A"}</span>
                 <motion.span
                   key={currentSkill}
                   initial={{ opacity: 0, y: 20 }}
@@ -192,12 +192,12 @@ export default function CVPage() {
               </motion.div>
 
               <motion.p
-                className="text-gray-400 text-lg mb-10 leading-relaxed max-w-lg"
+                className="text-gray-200 text-lg mb-10 leading-relaxed max-w-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Final-year Software Engineering student passionate about AI, Data Science, and building technology that drives social impact.
+                Software Engineer specializing in AI and Data Science, with completed MITACS Globalink research experience in predictive modeling and explainable machine learning.
               </motion.p>
 
               <motion.div
@@ -292,23 +292,11 @@ export default function CVPage() {
                       <Code className="w-8 h-8 text-blue-600" />
                       <h3 className="text-xl font-bold">{skillCategories.programming.title}</h3>
                     </div>
-                    <div className="space-y-4">
-                      {skillCategories.programming.items.map((skill, index) => (
-                        <div key={skill.name}>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium">{skill.name}</span>
-                            <span className="text-sm text-gray-500">{skill.level}%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                            <motion.div
-                              className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              transition={{ duration: 1, delay: index * 0.1 }}
-                              viewport={{ once: true }}
-                            />
-                          </div>
-                        </div>
+                    <div className="flex flex-wrap gap-2">
+                      {skillCategories.programming.items.map((skill) => (
+                        <span key={skill.name} className="rounded-full bg-blue-50 px-3 py-2 text-sm font-medium text-blue-800 dark:bg-blue-950 dark:text-blue-200">
+                          {skill.name}
+                        </span>
                       ))}
                     </div>
                   </CardContent>
@@ -322,23 +310,11 @@ export default function CVPage() {
                       <Database className="w-8 h-8 text-green-600" />
                       <h3 className="text-xl font-bold">{skillCategories.aiData.title}</h3>
                     </div>
-                    <div className="space-y-4">
-                      {skillCategories.aiData.items.map((skill, index) => (
-                        <div key={skill.name}>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium">{skill.name}</span>
-                            <span className="text-sm text-gray-500">{skill.level}%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                            <motion.div
-                              className="bg-gradient-to-r from-green-500 to-blue-600 h-2 rounded-full"
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              transition={{ duration: 1, delay: index * 0.1 }}
-                              viewport={{ once: true }}
-                            />
-                          </div>
-                        </div>
+                    <div className="flex flex-wrap gap-2">
+                      {skillCategories.aiData.items.map((skill) => (
+                        <span key={skill.name} className="rounded-full bg-green-50 px-3 py-2 text-sm font-medium text-green-800 dark:bg-green-950 dark:text-green-200">
+                          {skill.name}
+                        </span>
                       ))}
                     </div>
                   </CardContent>
@@ -352,23 +328,11 @@ export default function CVPage() {
                       <Settings className="w-8 h-8 text-purple-600" />
                       <h3 className="text-xl font-bold">{skillCategories.tools.title}</h3>
                     </div>
-                    <div className="space-y-4">
-                      {skillCategories.tools.items.map((skill, index) => (
-                        <div key={skill.name}>
-                          <div className="flex justify-between mb-2">
-                            <span className="text-sm font-medium">{skill.name}</span>
-                            <span className="text-sm text-gray-500">{skill.level}%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                            <motion.div
-                              className="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full"
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              transition={{ duration: 1, delay: index * 0.1 }}
-                              viewport={{ once: true }}
-                            />
-                          </div>
-                        </div>
+                    <div className="flex flex-wrap gap-2">
+                      {skillCategories.tools.items.map((skill) => (
+                        <span key={skill.name} className="rounded-full bg-purple-50 px-3 py-2 text-sm font-medium text-purple-800 dark:bg-purple-950 dark:text-purple-200">
+                          {skill.name}
+                        </span>
                       ))}
                     </div>
                   </CardContent>
@@ -406,8 +370,13 @@ export default function CVPage() {
                 <motion.div key={project.title} variants={fadeInUp}>
                   <Card className="group h-full hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
                     <CardContent className="p-0">
-                      <div className={`h-48 bg-gradient-to-br ${project.color} rounded-t-lg flex items-center justify-center`}>
-                        <Code className="w-16 h-16 text-white opacity-80" />
+                      <div className="relative h-48 overflow-hidden rounded-t-lg bg-gray-900">
+                        <img
+                          src={project.image}
+                          alt={`${project.title} project preview`}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-25`} />
                       </div>
                       <div className="p-6">
                         <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
@@ -1153,7 +1122,6 @@ export default function CVPage() {
                     {languages.map((lang) => (
                       <div key={lang.name} className="flex justify-between items-center">
                         <span className="font-medium">{lang.name}</span>
-                        <span className="text-sm text-gray-500">{lang.level}</span>
                       </div>
                     ))}
                   </div>
