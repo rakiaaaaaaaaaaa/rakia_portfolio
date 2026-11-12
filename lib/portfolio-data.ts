@@ -22,6 +22,12 @@ export const personalInfo = {
 // ─────────────────────────────────────────────────────────────
 //  HERO
 // ─────────────────────────────────────────────────────────────
+export const heroSkills = [
+  "AI & Data Science Engineer",
+  "Machine Learning Researcher",
+  "Software Engineer",
+]
+
 export const heroBadge = "Open to Opportunities"
 
 

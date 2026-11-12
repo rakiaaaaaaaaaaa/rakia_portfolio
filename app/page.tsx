@@ -28,6 +28,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import {
   personalInfo,
+  heroSkills,
   heroBadge,
   aboutText,
   skills as skillCategories,
@@ -45,6 +46,7 @@ import {
 
 export default function CVPage() {
   const [darkMode, setDarkMode] = useState(true)
+  const [currentSkill, setCurrentSkill] = useState(0)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -62,6 +64,13 @@ export default function CVPage() {
   const openCVPDF = () => {
     window.open(personalInfo.cvFile, "_blank", "noopener,noreferrer")
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkill((prev) => (prev + 1) % heroSkills.length)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [])
 
   useEffect(() => {
     document.documentElement.classList.add("dark")
@@ -147,22 +156,50 @@ export default function CVPage() {
               </motion.div>
 
               <motion.h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-white">Software Engineer specializing in </span>
+                <span className="text-white">Hi, I&apos;m </span>
                 <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-                  AI &amp; Data Science
+                  {personalInfo.name}
                 </span>
               </motion.h1>
 
+              <motion.div
+                className="text-2xl md:text-3xl mb-8 h-12 flex items-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <span className="mr-2 text-gray-300">{currentSkill === 0 ? "An" : "A"}</span>
+                <motion.span
+                  key={currentSkill}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-blue-400 font-semibold"
+                >
+                  {heroSkills[currentSkill]}
+                </motion.span>
+              </motion.div>
+
               <motion.p
-                className="text-gray-200 text-lg mb-5 leading-relaxed max-w-2xl"
+                className="text-gray-200 text-lg mb-3 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                Software Engineer specializing in AI &amp; Data Science
+              </motion.p>
+
+              <motion.p
+                className="text-gray-200 text-lg mb-3 leading-relaxed max-w-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 I develop intelligent, data-driven solutions by leveraging Artificial Intelligence, Machine Learning, and Software Engineering to transform complex challenges into practical innovations.
               </motion.p>
@@ -171,7 +208,7 @@ export default function CVPage() {
                 className="text-blue-300 text-lg font-medium mb-10 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
               >
                 Turning data into insights. Turning ideas into intelligent solutions.
               </motion.p>
