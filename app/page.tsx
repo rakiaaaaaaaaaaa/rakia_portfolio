@@ -28,7 +28,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import {
   personalInfo,
-  heroSkills,
   heroBadge,
   aboutText,
   skills as skillCategories,
@@ -46,7 +45,6 @@ import {
 
 export default function CVPage() {
   const [darkMode, setDarkMode] = useState(true)
-  const [currentSkill, setCurrentSkill] = useState(0)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -61,21 +59,9 @@ export default function CVPage() {
     contactSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
-  const downloadPDF = () => {
-    const link = document.createElement("a")
-    link.href = personalInfo.cvFile
-    link.download = "Rakia_Souei_CV.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const openCVPDF = () => {
+    window.open(personalInfo.cvFile, "_blank", "noopener,noreferrer")
   }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSkill((prev) => (prev + 1) % heroSkills.length)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
 
   useEffect(() => {
     document.documentElement.classList.add("dark")
@@ -161,43 +147,33 @@ export default function CVPage() {
               </motion.div>
 
               <motion.h1
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-white">Hi, I&apos;m </span>
+                <span className="text-white">Software Engineer specializing in </span>
                 <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-                  {personalInfo.name}
+                  AI &amp; Data Science
                 </span>
               </motion.h1>
 
-              <motion.div
-                className="text-2xl md:text-3xl mb-8 h-12 flex items-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <motion.p
+                className="text-gray-200 text-lg mb-5 leading-relaxed max-w-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <span className="mr-2 text-gray-300">{currentSkill === 0 ? "An" : "A"}</span>
-                <motion.span
-                  key={currentSkill}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-blue-400 font-semibold"
-                >
-                  {heroSkills[currentSkill]}
-                </motion.span>
-              </motion.div>
+                I develop intelligent, data-driven solutions by leveraging Artificial Intelligence, Machine Learning, and Software Engineering to transform complex challenges into practical innovations.
+              </motion.p>
 
               <motion.p
-                className="text-gray-200 text-lg mb-10 leading-relaxed max-w-lg"
+                className="text-blue-300 text-lg font-medium mb-10 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Software Engineer specializing in AI and Data Science, with completed MITACS Globalink research experience in predictive modeling and explainable machine learning.
+                Turning data into insights. Turning ideas into intelligent solutions.
               </motion.p>
 
               <motion.div
@@ -211,7 +187,7 @@ export default function CVPage() {
                   onClick={() => setShowCVSection(true)}
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download CV
+                  View CV
                 </Button>
                 <Button
                   variant="outline"
@@ -947,9 +923,9 @@ export default function CVPage() {
               <div className="sticky top-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 p-6 flex justify-between items-center">
                 <h2 className="text-2xl font-bold">Curriculum Vitae</h2>
                 <div className="flex gap-2">
-                  <Button onClick={downloadPDF} className="bg-blue-600 hover:bg-blue-700 text-white">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download CV
+                  <Button onClick={openCVPDF} className="bg-blue-600 hover:bg-blue-700 text-white">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Open CV PDF
                   </Button>
                   <Button
                     variant="outline"
@@ -966,7 +942,7 @@ export default function CVPage() {
                 <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
                   <h1 className="text-4xl font-bold mb-2">{personalInfo.name}</h1>
                   <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">
-                    Software Engineering & Data Science — MITACS Globalink Researcher
+                    Software Engineer specializing in AI & Data Science
                   </p>
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700">
                     <img
